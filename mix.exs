@@ -20,7 +20,7 @@ defmodule Copybook.Mixfile do
   def application do
     [
       mod: {Copybook.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :sqlitex]
     ]
   end
 
@@ -36,7 +36,9 @@ defmodule Copybook.Mixfile do
       {:phoenix, "~> 1.3.4"},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
-      {:postgrex, ">= 0.0.0"},
+      {:sqlite_ecto2, github: "se-apc/sqlite_ecto2"},
+      {:esqlite, github: "se-apc/esqlite", override: true},
+      {:sqlitex, "~> 1.3.3"},
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},

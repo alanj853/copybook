@@ -50,7 +50,7 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :copybook, Copybook.Repo,
-  adapter: Ecto.Adapters.Postgres,
+  adapter: Sqlite.Ecto2,
   username: "postgres",
   password: "postgres",
   database: "copybook_dev",
