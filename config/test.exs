@@ -11,9 +11,10 @@ config :logger, level: :warn
 
 # Configure your database
 config :copybook, Copybook.Repo,
-  adapter: Ecto.Adapters.Postgres,
+  adapter: Sqlite.Ecto2,
   username: "postgres",
   password: "postgres",
   database: "copybook_test",
   hostname: "localhost",
+  pool_size: 10,
   pool: Ecto.Adapters.SQL.Sandbox
